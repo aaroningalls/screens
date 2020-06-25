@@ -48,7 +48,7 @@ function readyMail(){
     $mail->Port = 587;
     $mail->SMTPAuth = true;
     $mail->Username = 'dsuscreens@gmail.com';
-    $mail->Password = 'cuvjboejyuorufvn';
+    $mail->Password = '';
     $mail->setFrom('dsuscreens@gmail.com', 'DSU Screens');
     return $mail;
 }
