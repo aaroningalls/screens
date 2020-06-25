@@ -1,0 +1,208 @@
+h1, h2, h3, input[type=submit], label, input:not([type=submit]), option, select {
+  font-family: "Roboto", "Crimson Text", Helvetica, Arial, Sans-Serif;
+}
+
+p {
+  font-family: "Crimson Text", Georgia, Serif;
+}
+
+.check {
+  position: relative;
+  padding-left: 35px;
+  margin-top: 6px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.check input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.check input:checked ~ .checkmark {
+  background-color: #00a9e0;
+  border: 1px solid #00a9e0;
+}
+
+.check input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.check .checkmark:after {
+  left: 6px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #f4f4f4;
+  border: 1px solid #898282;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.checkmark:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.select {
+  width: 200px;
+  position: relative;
+  clear: both;
+}
+
+.select select {
+  display: none;
+}
+
+.select-selected {
+  background-color: #00a9e0;
+  color: #ffffff;
+  font-family: "Roboto", "Crimson Text", Helvetica, Arial, Sans-Serif;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #fff transparent transparent transparent;
+}
+
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #fff transparent;
+  top: 7px;
+}
+
+.select-items {
+  position: absolute;
+  background-color: #f4f4f4;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  font-family: "Roboto", "Crimson Text", Helvetica, Arial, Sans-Serif;
+}
+
+.select-items div {
+  color: black;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.select-items div:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.select-hide {
+  display: none;
+}
+
+.same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+label:not(.check) {
+  font-size: 1.3em;
+  margin-top: 5px;
+}
+
+label[for=time] {
+  height: 41px;
+}
+
+input:not([type=submit]):not([type=checkbox]):not([type=button]):not([type=reset]) {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 2px solid #00a9e0;
+  background-color: white;
+  padding: 6px 10px;
+  outline: 0;
+  height: 1.3em;
+  font-size: 1.25em;
+}
+
+input:not([type=submit]):not([type=checkbox]):not([type=button]):not([type=reset]):focus {
+  border-bottom: 2px solid #00779e;
+}
+
+input[type=submit], input[type=button], input[type=reset] {
+  cursor: pointer;
+  border: none;
+  padding: 8px 12px;
+  background-color: #00a9e0;
+  color: white;
+  font-size: .9em;
+}
+
+input[type=submit]:hover, input[type=button]:hover, input[type=reset]:hover {
+  background-color: #0098ca;
+}
+
+.buttons {
+  padding: 0;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  list-style-type: none;
+  position: relative;
+}
+
+.buttons li {
+  display: inline-block;
+}
+
+.buttons::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.grid-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 20% 50%;
+      grid-template-columns: 20% 50%;
+  width: 100%;
+}
+/*# sourceMappingURL=forms.css.map */

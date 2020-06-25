@@ -1,0 +1,85 @@
+@import "dsuStyle";
+
+table {
+    border-top: none;
+    width: 100%;
+    &, th, td {
+        border-collapse: collapse;
+    }
+    th {
+        background-color: $lightBlueBold;
+        color: white;
+        &:not(last-of-type){
+            border-right: 1px solid white;
+        }
+    }
+    td {
+        display: block;
+        border: 1px solid #ddd;
+    }
+    tr:nth-child(odd){
+        background-color: $lightGray;
+    }
+}
+th, td {
+    padding: 15px 4px
+}
+
+//Menu style
+#sortNav {
+    padding: 0;
+    margin: 15px 0 0 0;
+    ul {
+        margin: 0 auto;
+        li {
+            &:last-child {
+                border-right: none;
+            }
+            a {
+                &:hover, :focus {
+                    text-decoration: none;
+                    background-color: rgba(0,0,0,.1);
+                }
+            font-family: $headlineFont;
+            text-align: center;
+            font-size: 1.15em;
+            background-color: white;
+            padding: .5em;
+            display: block;
+            }
+        }
+    }
+}
+.activeSort {
+    background-color: #e6e6e6 !important; 
+    &:hover, :focus {
+       background-color: rgba(0,0,0,.1) !important;
+    }
+}
+
+/*Menu Structure*/
+#sortNav ul {
+    list-style: none; 
+    position: relative;
+    padding-left: 0;
+}
+#sortNav ul li {
+    float: left;
+}
+#sortNav ul ul {
+    position: absolute; 
+    top: 100%; 
+    display: none
+}
+#sortNav ul ul li {
+    float: none;
+}
+#sortNav ul li:hover > ul, #sortNav ul li:focus > ul {
+    display: block; 
+    width: 100%
+}
+#sortNav > ul::after {
+    content: ""; display: 
+    block; 
+    clear: both;
+}

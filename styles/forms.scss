@@ -1,0 +1,60 @@
+@import "dsuStyle";
+@import "mixins";
+@import "fancyForms";
+
+label:not(.check) {
+    font-size: 1.3em;
+    margin-top: 5px;
+}
+label[for=time] {
+    height: 41px
+}
+input:not([type=submit]):not([type=checkbox]):not([type=button]):not([type=reset]) {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid $lightBlueBold;
+    background-color: white;
+    padding: 6px 10px;
+    outline: 0;
+    height: 1.3em;
+    font-size: 1.25em;
+    &:focus {
+        border-bottom: 2px solid $lightBlue;
+    }
+}
+
+input[type=submit], input[type=button], input[type=reset] {
+    cursor: pointer;
+    border: none;
+    padding: 8px 12px;
+    background-color: $lightBlueBold;
+    color: white;
+    font-size: .9em; 
+    &:hover {
+        background-color: $lightBlueHover;
+    }
+  }
+.buttons {
+    padding: 0;
+    width: fit-content;
+    margin: 0 auto;
+    list-style-type: none;
+    position: relative;
+    li {
+        display: inline-block;
+    }
+    &::after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: 20% 50%;
+    width: 100%;
+}
+
+
+  

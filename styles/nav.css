@@ -1,0 +1,92 @@
+h1, h2, h3, input[type=submit], label, input:not([type=submit]), option, select {
+  font-family: "Roboto", "Crimson Text", Helvetica, Arial, Sans-Serif;
+}
+
+p {
+  font-family: "Crimson Text", Georgia, Serif;
+}
+
+/*Nav style*/
+#Hnav {
+  padding: 0 1% 0 10%;
+  margin: 0;
+  width: 85%;
+  background-color: #f4f4f4;
+}
+
+#Hnav ul {
+  width: 100%;
+  margin: 0 auto;
+}
+
+#Hnav ul li {
+  width: 45%;
+}
+
+#Hnav ul li a {
+  font-family: "Roboto", "Crimson Text", Helvetica, Arial, Sans-Serif;
+  text-align: center;
+  font-size: 1.3em;
+  background-color: #f4f4f4;
+  padding: .6em;
+  display: block;
+  border-bottom: 2px solid #f4f4f4;
+  border-top: 2px solid #f4f4f4;
+}
+
+#Hnav ul li a:hover, #Hnav ul li a :focus {
+  text-decoration: none;
+  background-color: #d3d3d3;
+  border-bottom: 2px solid #d3d3d3;
+  border-top: 2px solid #d3d3d3;
+}
+
+.sideIcons {
+  width: 5% !important;
+  float: right !important;
+}
+
+.sideIcons img {
+  height: 1.2em;
+}
+
+.active {
+  border-bottom: 2px solid #00a9e0 !important;
+}
+
+.active:hover, .active :focus {
+  border-bottom: 2px solid #00a9e0;
+}
+
+/*Menu Structure*/
+#Hnav ul {
+  list-style: none;
+  position: relative;
+  padding-left: 0;
+}
+
+#Hnav ul li {
+  float: left;
+}
+
+#Hnav ul ul {
+  position: absolute;
+  top: 100%;
+  display: none;
+}
+
+#Hnav ul ul li {
+  float: none;
+}
+
+#Hnav ul li:hover > ul, #Hnav ul li:focus > ul {
+  display: block;
+  width: 100%;
+}
+
+#Hnav > ul::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+/*# sourceMappingURL=nav.css.map */

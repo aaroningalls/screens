@@ -1,0 +1,106 @@
+h1, h2, h3, input[type=submit], label, input:not([type=submit]), option, select {
+  font-family: "Roboto", "Crimson Text", Helvetica, Arial, Sans-Serif;
+}
+
+p {
+  font-family: "Crimson Text", Georgia, Serif;
+}
+
+table {
+  border-top: none;
+  width: 100%;
+}
+
+table, table th, table td {
+  border-collapse: collapse;
+}
+
+table th {
+  background-color: #00a9e0;
+  color: white;
+}
+
+table th:not(last-of-type) {
+  border-right: 1px solid white;
+}
+
+table td {
+  display: block;
+  border: 1px solid #ddd;
+}
+
+table tr:nth-child(odd) {
+  background-color: #f4f4f4;
+}
+
+th, td {
+  padding: 15px 4px;
+}
+
+#sortNav {
+  padding: 0;
+  margin: 15px 0 0 0;
+}
+
+#sortNav ul {
+  margin: 0 auto;
+}
+
+#sortNav ul li:last-child {
+  border-right: none;
+}
+
+#sortNav ul li a {
+  font-family: "Roboto", "Crimson Text", Helvetica, Arial, Sans-Serif;
+  text-align: center;
+  font-size: 1.15em;
+  background-color: white;
+  padding: .5em;
+  display: block;
+}
+
+#sortNav ul li a:hover, #sortNav ul li a :focus {
+  text-decoration: none;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.activeSort {
+  background-color: #e6e6e6 !important;
+}
+
+.activeSort:hover, .activeSort :focus {
+  background-color: rgba(0, 0, 0, 0.1) !important;
+}
+
+/*Menu Structure*/
+#sortNav ul {
+  list-style: none;
+  position: relative;
+  padding-left: 0;
+}
+
+#sortNav ul li {
+  float: left;
+}
+
+#sortNav ul ul {
+  position: absolute;
+  top: 100%;
+  display: none;
+}
+
+#sortNav ul ul li {
+  float: none;
+}
+
+#sortNav ul li:hover > ul, #sortNav ul li:focus > ul {
+  display: block;
+  width: 100%;
+}
+
+#sortNav > ul::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+/*# sourceMappingURL=table.css.map */

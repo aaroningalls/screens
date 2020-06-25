@@ -1,0 +1,16 @@
+$darkBlue: #003552;
+$lightBlue: #00779e;
+$lightBlueBold: #00a9e0;
+$lightBlueHover: #0098ca;
+$lightGray: #f4f4f4;
+$lightGrayText: #767474;
+$darkGray: #4d4f53;
+$headlineFont: 'Roboto', 'Crimson Text', Helvetica, Arial, Sans-Serif;
+$bodyFont: 'Crimson Text', Georgia, Serif;
+
+h1, h2, h3, input[type=submit], label, input:not([type=submit]), option, select {
+    font-family: $headlineFont;
+}
+p {
+    font-family: $bodyFont;
+}

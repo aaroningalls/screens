@@ -1,0 +1,98 @@
+body {
+    width: 90%;
+    margin: auto;
+}
+main {
+    display: grid;
+    grid-template-columns: auto 33%;
+    height: 100vh;
+    .grid-container {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-column-gap: 1em;
+    }
+    .grid {
+        display: grid;
+        grid-template-columns: auto auto auto auto auto;
+        grid-column-gap: 1em;
+    }
+    .grid-2 {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-column-gap: 1em;
+    }
+    section::-webkit-scrollbar { width: 0 !important }
+    aside::-webkit-scrollbar { width: 0 !important }
+    section {
+        scrollbar-width: none;
+        overflow: auto;
+        margin-right: 5%;
+        padding-right: 5%;
+        table {
+            width: 90%;
+            display: none;
+            border-collapse: collapse;
+            & th, & td {
+                padding: 10px 5px;
+            }
+            th {
+                background-color: rgb(47,112,252);
+                color: white;
+                cursor: pointer;
+            }
+            tr:not(:first-child){
+                border-top: 1px solid lightgray;
+            }
+            td:first-child {
+                width: 40%;
+            }
+            td:nth-child(2){
+                width: 45%
+            }
+            td:nth-child(3){
+                width: 10%
+            }td:nth-child(4){
+                width: auto;
+            }
+        }
+    }
+    form {
+        label{
+            font-size: 1.1em;
+        }
+        input:not([type=button]):not([type=submit]) {
+            border: none;
+            border-bottom: 1px solid blue;
+        }
+        input {
+            font-size: 1.1em;
+        }
+        input[disabled]{
+            background-color: white;
+        }
+        input:focus {
+            outline: 0
+        }
+    }
+    aside {
+        scrollbar-width: none;
+        overflow: scroll;
+        height: 75%;
+    }
+    textarea {
+        width: 100%
+    }
+    .wiki-box {
+       
+    }
+}
+@media only screen and (max-height: 900px){
+    main aside {
+        height: 68%;
+    }
+}
+@media only screen and (max-height: 700px){
+    main aside {
+        height: 60%
+    }
+}

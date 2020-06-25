@@ -1,0 +1,108 @@
+.check {
+    //display: inline;
+    position: relative;
+    padding-left: 35px;
+    margin-top: 6px;
+    cursor: pointer;
+    font-size: 22px;
+    @include user-select(none);
+    input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+    }
+    input:checked ~ .checkmark {
+        background-color: $lightBlueBold;
+        border: 1px solid $lightBlueBold;
+        &:after {
+            display: block
+        }
+    }
+    .checkmark:after {
+        left: 6px;
+        top: 2px;
+        width: 5px;
+        height: 10px;
+        border: solid white;
+        border-width: 0 3px 3px 0;
+        @include transform(rotate(45deg))
+    }
+}
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: $lightGray;
+    border: 1px solid #898282;
+    &:after {
+        content: "";
+        position: absolute;
+        display: none;
+    }
+    &:hover {
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+}
+
+.select {
+    width: 200px;
+    position: relative;
+    clear: both;
+    select {
+        display: none;
+    }
+    &-selected {
+        background-color: $lightBlueBold;
+        color: #ffffff;
+        font-family: $headlineFont;
+        padding: 8px 16px;
+        border: 1px solid transparent;
+        border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+        cursor: pointer;
+        @include user-select(none);
+        &:after {
+            position: absolute;
+            content: "";
+            top: 14px;
+            right: 10px;
+            width: 0;
+            height: 0;
+            border: 6px solid transparent;
+            border-color: #fff transparent transparent transparent;
+        }
+        &.select-arrow-active:after {
+            border-color: transparent transparent #fff transparent;
+            top: 7px;
+        }
+    }
+    &-items {
+        position: absolute;
+        background-color: $lightGray;
+        top: 100%;
+        left: 0;
+        right: 0;
+        z-index: 99;
+        font-family: $headlineFont;
+        div {
+            color: black;
+            padding: 8px 16px;
+            border: 1px solid transparent;
+            border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+            cursor: pointer;
+            @include user-select(none);
+        }
+        div:hover {
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+    }
+    &-hide {
+        display: none;
+    }
+}
+.same-as-selected {
+    background-color: rgba(0, 0, 0, 0.1);;
+}

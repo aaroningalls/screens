@@ -1,0 +1,75 @@
+@import "dsuStyle";
+
+/*Nav style*/
+
+#Hnav {
+    padding: 0 1% 0 10%;
+    margin: 0;
+    width: 85%;
+    background-color: $lightGray;
+    ul {
+        width: 100%;
+        margin: 0 auto;
+        li {
+            width: 45%;
+            a {
+                &:hover, :focus {
+                    text-decoration: none;
+                    background-color: #d3d3d3;
+                    border-bottom: 2px solid #d3d3d3;
+                    border-top: 2px solid #d3d3d3;
+                }
+            font-family: $headlineFont;
+            text-align: center;
+            font-size: 1.3em;
+            background-color: $lightGray;
+            padding: .6em;
+            display: block;
+            border-bottom: 2px solid $lightGray;
+            border-top: 2px solid $lightGray;
+            }
+        }
+    }
+}
+.sideIcons {
+    width: 5% !important;
+    float: right !important;
+    img {
+        height: 1.2em;
+    }
+}
+
+.active {
+    border-bottom: 2px solid $lightBlueBold !important;
+    &:hover, :focus {
+        border-bottom: 2px solid $lightBlueBold;
+    }
+}
+
+/*Menu Structure*/
+#Hnav ul {
+    list-style: none; 
+    position: relative;
+    padding-left: 0;
+}
+#Hnav ul li {
+    float: left;
+}
+
+#Hnav ul ul {
+    position: absolute; 
+    top: 100%; 
+    display: none
+}
+#Hnav ul ul li {
+    float: none;
+}
+#Hnav ul li:hover > ul, #Hnav ul li:focus > ul {
+    display: block; 
+    width: 100%
+}
+#Hnav > ul::after {
+    content: ""; 
+    display: block; 
+    clear: both;
+}

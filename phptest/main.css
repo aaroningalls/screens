@@ -1,0 +1,131 @@
+body {
+  width: 90%;
+  margin: auto;
+}
+
+main {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto 33%;
+      grid-template-columns: auto 33%;
+  height: 100vh;
+}
+
+main .grid-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
+  grid-column-gap: 1em;
+}
+
+main .grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto auto auto auto;
+      grid-template-columns: auto auto auto auto auto;
+  grid-column-gap: 1em;
+}
+
+main .grid-2 {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
+  grid-column-gap: 1em;
+}
+
+main section::-webkit-scrollbar {
+  width: 0 !important;
+}
+
+main aside::-webkit-scrollbar {
+  width: 0 !important;
+}
+
+main section {
+  scrollbar-width: none;
+  overflow: auto;
+  margin-right: 5%;
+  padding-right: 5%;
+}
+
+main section table {
+  width: 90%;
+  display: none;
+  border-collapse: collapse;
+}
+
+main section table th, main section table td {
+  padding: 10px 5px;
+}
+
+main section table th {
+  background-color: #2f70fc;
+  color: white;
+  cursor: pointer;
+}
+
+main section table tr:not(:first-child) {
+  border-top: 1px solid lightgray;
+}
+
+main section table td:first-child {
+  width: 40%;
+}
+
+main section table td:nth-child(2) {
+  width: 45%;
+}
+
+main section table td:nth-child(3) {
+  width: 10%;
+}
+
+main section table td:nth-child(4) {
+  width: auto;
+}
+
+main form label {
+  font-size: 1.1em;
+}
+
+main form input:not([type=button]):not([type=submit]) {
+  border: none;
+  border-bottom: 1px solid blue;
+}
+
+main form input {
+  font-size: 1.1em;
+}
+
+main form input[disabled] {
+  background-color: white;
+}
+
+main form input:focus {
+  outline: 0;
+}
+
+main aside {
+  scrollbar-width: none;
+  overflow: scroll;
+  height: 75%;
+}
+
+main textarea {
+  width: 100%;
+}
+
+@media only screen and (max-height: 900px) {
+  main aside {
+    height: 68%;
+  }
+}
+
+@media only screen and (max-height: 700px) {
+  main aside {
+    height: 60%;
+  }
+}
+/*# sourceMappingURL=main.css.map */

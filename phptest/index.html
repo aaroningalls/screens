@@ -1,0 +1,299 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="main.css">
+    </head>
+    <body>
+        <header>
+
+        </header>
+        <main>
+            <section>
+                <h1>Shops</h1>
+                <form id="search" action="">
+                    <div class="grid">
+                        <label>Search Shops:</label>
+                        <input type="search" id="search-city" placeholder="City SHP-123" pattern="[a-zA-z]{1,}[ ][a-zA-Z]{1,3}-\d{1,}" required>
+                        <input type="submit" value="Search">
+                    </div>
+                </form>
+                <form>
+                    <div class="grid">
+                            <label>Shop Type:</label>
+                            <select id="shop">
+                                <option value="adv">Adventuring Shop</option>
+                                <option value="bkr">Bakery</option>
+                                <option value="bsm">Blacksmith</option>
+                                <option value="bks">Book Seller</option>
+                                <option value="bnd">Bookbinder</option>
+                                <option value="brw">Brewery</option>
+                                <option value="bch">Butcher</option>
+                                <option value="dck">Dock</option>
+                                <option value="fsh">Fishmonger</option>
+                                <option value="flt">Fletcher</option>
+                                <option value="gen">General Store</option>
+                                <option value="inn">Inn</option>
+                                <option value="mgc">Magic Shop</option>
+                                <option value="mkt">Market</option>
+                                <option value="ptn">Potion Shop</option>
+                                <option value="tnr">Tanner</option>
+                                <option value="sdl">Saddler</option>
+                                <option value="stb">Stable</option>
+                                <option value="tlr">Tailor</option>
+                                <option value="tvn">Tavern</option>
+                                <option value="tmp">Temple</option>
+                                <option value="wpn">Weapon Shop</option>
+                            </select>
+                            <label>City:</label>
+                            <input type="text" id="shopCity" list="towns" placeholder="City">
+                        <div>
+                            <label>Premium?</label>
+                            <input type="checkbox" id="premium">
+                        </div>
+                            <label>Theme:</label>
+                            <select id="theme">
+                                <option value="none">None</option>
+                                <option value="art/games-theme">Art/Games Theme</option>
+                                <option value="magical-theme">Magical Theme</option>
+                                <option value="shady-theme">Shady Dealer</option>
+                                <option value="water-theme">Water Theme</option>
+                            </select>
+                            <label>Store Number:</label>
+                            <input type="text" id="shopNum" placeholder="#" pattern="\d">
+                    </div>
+                    <input type="button" id="shop-submit" value="Generate">
+                </form>
+                <form>
+                    <div class="grid">
+                        <label>Name:</label>
+                        <input type="text" id="shopName">
+                        <label>Owner:</label>
+                        <input type="text" id="shopOwner">
+                        <div class="grid-2">
+                            <label>ID:</label>
+                            <input type="text" id="shopId" disabled>
+                        </div>
+                    </div>
+                    <input type="button" id="saveShop" value="Save">
+                </form>
+                <table id="shop-table">
+                    <tr><td>Search Items:</td><td colspan="3"><input type="text" oninput="searchTable()" id="table-search"></td></tr>
+                    <tr><th onclick="sortTable(0)">Category</th><th onclick="sortTable(1)">Item</th><th onclick="sortTable(2)">Cost</th><th onclick="sortTable(3)">Stock</th></tr>
+                </table>
+            </section>
+            <div>
+            <aside>
+                <h1>NPCs</h1>
+                <form method="post">
+                    <div class="grid-container">
+                        <label>Preset:</label>
+                        <select id="preset">
+                            <option value="normal">Normal</option>
+                            <optgroup label="Civilians">
+                                <option value="shop">Shop Keeper</option>
+                            </optgroup>
+                        </select>
+                        <label>Race:</label>
+                        <select id="race">
+                            <option value="random">Random</option>
+                            <option value="azNar">az-Nar Zag-Him</option>
+                            <option value="dwarf">Dwarf</option>
+                            <option value="elf">Elf</option>
+                            <option value="goblin">Goblin</option>
+                            <option value="halfling">Halfling</option>
+                            <option value="human">Human</option>
+                            <option value="orc">Orc</option>
+                            <option value="tiefling">Tiefling</option>                    
+                        </select>
+                        <label>Class:</label>
+                        <select id="class">
+                            <option value="none">None</option>
+                            <option value="random">Random</option>
+                            <option value="barbarian">Barbarian</option>
+                            <option value="bard">Bard</option>
+                            <option value="cleric">Cleric</option>
+                            <option value="druid">Druid</option>
+                            <option value="fighter">Fighter</option>
+                            <option value="monk">Monk</option>
+                            <option value="paladin">Paladin</option>
+                            <option value="ranger">Ranger</option>
+                            <option value="rogue">Rogue</option>
+                            <option value="sorcerer">Sorcerer</option>
+                            <option value="warlock">Warlock</option>
+                            <option value="wizard">Wizard</option>
+                        </select>
+                        <label>Level:</label>
+                        <select id="level">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="13">13</option>
+                            <option value="14">14</option>
+                            <option value="15">15</option>
+                            <option value="16">16</option>
+                            <option value="17">17</option>
+                            <option value="18">18</option>
+                            <option value="19">19</option>
+                            <option value="20">20</option>
+                        </select>
+                    </div>
+                    <div class="grid-2">
+                        <label>Gender</label>
+                        <div>
+                            <label>Male:</label>
+                            <span id="male-percent">50%</span>
+                            <input type="range" value="50" id="gender">
+                            <label>Female:</label>
+                            <span id="female-percent">50%</span>
+                        </div>
+                    </div>
+                    <label>Attributes?</label>
+                    <input type="checkbox" id="attributes" checked><br>
+                    <input type="button" value="Generate" id="gen-submit">
+                </form>
+                <h2>NPC Details</h2>
+                <form method="post">
+                    <div class="grid-container">
+                        <label>First Name:</label>
+                        <input type="text" id="first">
+                        <label>Last Name:</label>
+                        <input type="text" id="last">
+                        <label>Race:</label>
+                        <select id="result-race">
+                            <option value="azNar">az-Nar Zag-Him</option>
+                            <option value="dwarf">Dwarf</option>
+                            <option value="elf">Elf</option>
+                            <option value="goblin">Goblin</option>
+                            <option value="halfling">Halfling</option>
+                            <option value="human">Human</option>
+                            <option value="orc">Orc</option>
+                            <option value="tiefling">Tiefling</option>                    
+                        </select>
+                        <label>Class:</label>
+                        <select id="result-class">
+                            <option value="none">None</option>
+                            <option value="barbarian">Barbarian</option>
+                            <option value="bard">Bard</option>
+                            <option value="cleric">Cleric</option>
+                            <option value="druid">Druid</option>
+                            <option value="fighter">Fighter</option>
+                            <option value="monk">Monk</option>
+                            <option value="paladin">Paladin</option>
+                            <option value="ranger">Ranger</option>
+                            <option value="rogue">Rogue</option>
+                            <option value="sorcerer">Sorcerer</option>
+                            <option value="warlock">Warlock</option>
+                            <option value="wizard">Wizard</option>
+                        </select>
+                        <label>Hometown:</label>
+                        <input type="text" list="towns" id="location">
+                        <label>Age:</label>
+                        <input type="text" id="age">
+                        <label>Height:</label>
+                        <input type="text" id="height">
+                        <label>Weight:</label>
+                        <input type="text" id="weight">
+                        <label>Gender:</label>
+                        <div>
+                            <input type="radio" name="result-gender" id="result-male" value="male" checked>
+                            <label>Male</label>
+                            <input type="radio" name="result-gender" id="result-female" value="female">
+                            <label>Female</label>
+                        </div>
+                    </div>
+                        <h3>Ability Scores</h3>
+                        <div class="grid-container">
+                            <label>Strength</label>
+                            <input type="text" id="str">
+                            <label>Dexterity</label>
+                            <input type="text" id="dex">
+                            <label>Constitution</label>
+                            <input type="text" id="con">
+                            <label>Intelligence</label>
+                            <input type="text" id="int">
+                            <label>Wisdom</label>
+                            <input type="text" id="wis">
+                            <label>Charisma</label>
+                            <input type="text" id="cha">
+                        </div>
+                    <input type="button" id="result-submit" value="Save"><br> 
+                </form>
+                    
+            </aside>
+            <div class="wiki-box">
+                <textarea rows="15" id="wiki-text"></textarea><br>
+                <a href="" target="_blank" id="wiki-edit">Create Wiki Page</a>    
+            </div>     
+            </div>
+        </main>
+        <footer>
+
+        </footer>
+    <datalist id="towns">
+        <option value="Lafeld">
+        <option value="Wywold">
+        <option value="Baygate">
+        <option value="Giwold">
+        <option value="Famor">
+        <option value="Refield">
+        <option value="Zuror">
+        <option value="Eldford">
+        <option value="Erdale">
+        <option value="Beyton">
+        <option value="Athill">
+        <option value="Armoor">
+        <option value="Reham">
+        <option value="Stefor">
+        <option value="Prafeld">
+        <option value="Hilburh">
+        <option value="Elthorp">
+        <option value="Mywick">
+        <option value="Thahyrst">
+        <option value="Korriban">
+        <option value="Ormor">
+        <option value="Erley">
+        <option value="Inleah">
+        <option value="Willes">
+        <option value="Elel">
+        <option value="Alallon">
+        <option value="Tirione">
+        <option value="Mithlonde">
+        <option value="Amholian">
+        <option value="Nythrenmel">
+        <option value="Alftheim">
+        <option value="Arazar">
+        <option value="Uzukkhil">
+        <option value="Abad">
+        <option value="Tumunzadd">
+        <option value="Kibaraz">
+        <option value="Zundinarg">
+        <option value="Ad-ha al-Za">
+        <option value="Fort Galinddan al-Khobii">
+        <option value="Lugdog">
+        <option value="Radbul">
+        <option value="Naruk">
+        <option value="Orcog">
+        <option value="Grabug">
+        <option value="Destead">
+        <option value="Rabrook">
+        <option value="Evrargond">
+        <option value="Evras">
+        <option value="Lindoriand">
+        <option value="Zograk">
+    </datalist>
+    </body>
+    <script src="jquery.js"></script>
+    <script src="markov.js"></script>
+    <script src="name_set.js"></script>
+    <script src="switchFunctions.js"></script>
+    <script src="presets.js"></script>
+    <script src="main.js"></script>
+</html>
